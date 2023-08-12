@@ -8,11 +8,6 @@ android {
     namespace = "com.abdelhalim.testsweepai"
     compileSdk = 34
 
-    externalNativeBuild {
-        cargo {
-            path "src/main/rust/Cargo.toml"
-        }
-    }
 
     defaultConfig {
         applicationId = "com.abdelhalim.testsweepai"
@@ -73,4 +68,15 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.38.1")
+    kapt("com.google.dagger:hilt-compiler:2.38.1")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
 }
