@@ -1,0 +1,7 @@
+package com.abdelhalim.testsweepai.data.repository
+
+// Add necessary imports
+
+class ExampleRepository {
+    // Implement the required functions and logic here
+}
