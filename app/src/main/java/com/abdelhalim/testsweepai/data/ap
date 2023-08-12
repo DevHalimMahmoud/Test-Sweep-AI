@@ -1,0 +1,12 @@
+package com.abdelhalim.testsweepai.data.api
+
+import retrofit2.http.GET
+
+interface ApiService {
+    @GET("example")
+    suspend fun getExampleData(): ExampleResponse
+}
+
+data class ExampleResponse(
+    // Define the response structure here
+)

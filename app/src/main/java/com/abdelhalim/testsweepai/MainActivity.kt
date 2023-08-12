@@ -13,11 +13,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.abdelhalim.testsweepai.ui.theme.TestSweepAITheme
 
 class MainActivity : ComponentActivity() {
-    init {
-        System.loadLibrary("rust")
-    }
-
-    private external fun makeNetworkRequest(): String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting(makeNetworkRequest())
+                    Greeting("Android")
                 }
             }
         }
