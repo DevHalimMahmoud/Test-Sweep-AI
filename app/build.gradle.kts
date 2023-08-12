@@ -8,6 +8,12 @@ android {
     namespace = "com.abdelhalim.testsweepai"
     compileSdk = 34
 
+    externalNativeBuild {
+        cargo {
+            path "src/main/rust/Cargo.toml"
+        }
+    }
+
     defaultConfig {
         applicationId = "com.abdelhalim.testsweepai"
         minSdk = 24
